@@ -1,0 +1,487 @@
+/* apply a natural box layout model to all elements */
+html {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /* 10px = 1rem */
+    font-size: 62.5;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* nav bar */
+.openbtn {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    color: rgb(255, 255, 255);
+    font-family: 'PT Sans', sans-serif;
+}
+.openbtn:hover {
+    color: grey;
+}
+.menu-text {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 12px;
+    display: block;
+}
+
+/* The side navigation menu */
+.all-over-bkg {
+    display: none;
+}
+
+.is-visible {
+    background-color: rgba(0,0,0,0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 9999;
+    display: block;
+}
+
+#mySidenav {
+    z-index: 10000;
+}
+
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    background-color: rgb(75, 75, 75);  
+}
+  
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: grey;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+main {
+    transition: margin-left .5s;
+    padding: 0;
+}
+
+/* Media queries */
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+/* RWD tag to visually indicate media query breaks */
+#tag {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 25px;
+	height: 25px;
+	background-color: #CC0000;
+}
+
+#mapid { height: 180px; }
+
+/* PAGE THEME COLORS - PLEASE USE */
+:root {
+    --menu-color: gold;
+    --iu-red: rgb(153, 0, 0);
+    --iu-grey: rgb(237, 235, 235);
+    --iu-black: rgb(69, 56, 43);
+}
+
+/* Extra small devices (phones, less than 768px) */
+
+/* 
+    GENERAL
+*/
+body {
+  font-family: 'PT Sans', sans-serif;
+  margin: 0;
+  background-color: #fff;
+}
+
+/* 
+    TYPOGRAPHY
+*/
+h1, h2, h3, h4, h5, h6, p, li, a, td, figcaption {
+
+    /* also adjust margin and line-height */
+}
+
+h1 {
+
+    /* also adjust padding and font weight */
+    /* adjust H1 size in the media queries */
+}
+
+h1 span {
+    
+    /* adjust font weight */
+}
+
+h2 {
+
+    font-size: 2rem;
+    
+}
+
+h3 {
+
+    font-size: 2rem;
+    letter-spacing: 2px;
+
+}
+
+p {
+    font-size: 20px;
+}
+
+/*
+    HEADER
+*/
+
+.header_section {
+    width: 100%;
+    min-height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--iu-red);
+}
+
+.header_section h1, .header_section h2 {
+    font-size: 4.2rem;
+    color: white;
+    margin: 0.5rem;
+    font-weight: bold;
+}
+
+.header_section h1 {
+    font-weight: 400; 
+}
+
+.map_section {
+    min-height: 55vh;
+}
+
+.racing-stripes {
+    min-height: 10vh;
+    background-image: linear-gradient(135deg, #ffffff 25%, #e3e3e3 25%, #e3e3e3 50%, #ffffff 50%, #ffffff 75%, #e3e3e3 75%, #e3e3e3 100%);
+    background-size: 140px 140px;
+}
+
+.main-section-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.main-section-column {
+    padding: 40px 0;
+    width: 60%;
+    min-height: 35vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main-section-column2 {
+    margin: 20px 0;
+    padding: 30px 0 60px;
+    display: flex;
+    width: 100%;
+    min-height: 35vh;
+    background: #e6e6e6;
+}
+
+.main-section-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+    justify-content: center;
+}
+
+.button-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.button-wrapper a {
+    min-width: 20%;
+}
+
+.button {
+    background-color: var(--iu-red);
+    border: 3px solid var(--iu-red);
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    padding: 0.5em 1.0em;
+    margin: 1.0em 2.0em 0 0;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition: background-color .2s ease-out,color .2s ease-out,border-color .18s ease-out;
+}
+
+.main-section-subcolumn {
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    width: 100%;
+}
+
+.main-section-column3 {
+    padding: 30px 0;
+    width: 60%;
+    min-height: 50vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.subcolumn-image {
+    background: url("../images/research-bioengineering.lab.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 90%;
+    min-height: 40vh;
+}
+
+.subcolumn-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between; 
+}
+
+.subcolumn-content p {
+    padding: 0;
+    margin: 0;
+}
+
+.subcolumn-content a {
+    min-width: 20%;
+    max-width: 45%;
+}
+
+.footer {
+    margin-top: 5vh;
+    min-height: 10vh;
+    width: 100%;
+    background-color: black;
+}
+
+/*
+    MEDIA QUERIES
+*/
+
+/* Mobile devices (tablets, 768px and up) */
+@media all and (max-width: 768px) {
+    #tag { background-color: #ff0000; }
+
+    .header_section {
+        min-height: 20vh;
+    }
+
+    .header_section h1 {
+        font-size: 24px;
+    }
+
+    .header_section h2 {
+        font-size: 24px;
+    }
+
+    .map_section {
+        min-height: 180px;
+    }
+    
+    .main-section-subcolumn {
+        display: grid;
+        grid-template-columns: 12fr;
+        width: 100%;
+    }
+
+    .button-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .racing-stripes {
+        background-image: linear-gradient(135deg, #ffffff 25%, #e3e3e3 25%, #e3e3e3 50%, #ffffff 50%, #ffffff 75%, #e3e3e3 75%, #e3e3e3 100%);
+        background-size: 75px 75px;
+        min-height: 40px;
+    }
+
+    .subcolumn-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-height: 20vh;
+        padding: 1rem;
+        justify-content: space-between; 
+    }   
+    .subcolumn-content a {
+        min-width: 70%;
+    }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media all and (min-width: 768px) and (max-width: 992px) {
+    #tag { background-color: #FF9900; }
+
+    .header_section {
+        min-height: 20vh;
+    }
+
+    .header_section h1 {
+        font-size: 36px;
+    }
+
+    .header_section h2 {
+        font-size: 36px;
+    }
+
+    .map_section {
+        min-height: 240px;
+    }
+
+    .racing-stripes {
+        background-image: linear-gradient(135deg, #ffffff 25%, #e3e3e3 25%, #e3e3e3 50%, #ffffff 50%, #ffffff 75%, #e3e3e3 75%, #e3e3e3 100%);
+        background-size: 75px 75px;
+        min-height: 40px;
+    }
+
+
+    .main-section-subcolumn {
+        display: grid;
+        grid-template-columns: 7fr 5fr;
+        width: 100%;
+    }
+
+
+    .subcolumn-image {
+        background: url("../images/research-bioengineering.lab.jpg");
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        min-height: 30vh;
+    }
+
+    .subcolumn-content {
+        display: inline-flex;
+        flex-direction: column;
+        width: 100%;
+        min-height: 20vh;
+        padding: 1rem;
+        justify-content: space-between; 
+    }   
+
+    .subcolumn-content a {
+        min-width: 70%;
+    }
+}
+
+
+/* Medium devices (desktops, 992px and up) */
+@media all and (max-width: 1200px) and (min-width: 992px) {
+
+    #tag { background-color: #00AA88; }
+
+    .header_section {
+        min-height: 20vh;
+    }
+
+    .header_section h1 {
+        font-size: 42px;
+    }
+
+    .header_section h2 {
+        font-size: 42px;
+    }
+
+    .map_section {
+        min-height: 360px;
+    }
+
+    .racing-stripes {
+        background-image: linear-gradient(135deg, #ffffff 25%, #e3e3e3 25%, #e3e3e3 50%, #ffffff 50%, #ffffff 75%, #e3e3e3 75%, #e3e3e3 100%);
+        background-size: 75px 75px;
+        min-height: 60px;
+    }
+
+    .main-section-subcolumn {
+        display: grid;
+        grid-template-columns: 7fr 5fr;
+        width: 100%;
+    }
+
+    .subcolumn-image {
+        background: url("../images/research-bioengineering.lab.jpg");
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        min-height: 30vh;
+    }
+    
+    .subcolumn-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-height: 30vh;
+        padding: 1rem;
+        justify-content: space-between; 
+    }    
+    .subcolumn-content a {
+        min-width: 90%;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media all and (min-width: 1200px) {
+
+    #tag { background-color: #674EA7; }
+
+    .map_section {
+        min-height: 480px;
+    }
+
+}
